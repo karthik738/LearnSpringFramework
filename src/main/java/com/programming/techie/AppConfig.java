@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.programming.techie") // will scan all @components and create beans for them , appconfig class can be empty 
 public class AppConfig {
 
+    // Bean annotation to interact with bean lifecycle hooks
     @Bean(name = "basicSpellChecker", initMethod = "init", destroyMethod = "destroy")
     public BasicSpellChecker createBasicSpellChecker() {
         return new BasicSpellChecker();
