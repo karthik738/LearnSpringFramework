@@ -7,12 +7,12 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource(value = "classpath:/application.properties")
+@PropertySource(value = "classpath:/application.properties") // this annotation helps to read from properties file and use it at runtime
 // @Scope("singleton") // one bean is reused everywhere
 // @Scope("prototype") // each time new bean is created
 public class AdvancedSpellChecker implements SpellChecker, InitializingBean, DisposableBean {
 
-    @Value("${app.database.uri}")
+    @Value("${app.database.uri}") // spring experession language
     private String databaseUri;
 
 
