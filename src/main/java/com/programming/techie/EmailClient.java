@@ -19,6 +19,7 @@ class EmailClient {
     // loosely coupled  - use interface implementation
     // private SpellChecker spellChecker; 
 
+    // constructor injection
     //  EmailClient(SpellChecker spellChecker){
         // this.spellChecker=spellChecker; // loosely coupled
     // }
@@ -27,6 +28,15 @@ class EmailClient {
     @Autowired
     @Qualifier("advancedSpellChecker")
     private SpellChecker spellChecker;
+
+    // using setter injection
+    public void setSpellChecker(SpellChecker spellChecker){
+        this.spellChecker=spellChecker;
+    }
+
+    public SpellChecker getSpellChecker(){
+        return spellChecker;
+    }
 
     void sendEmail(String emailMessage) {
         // basicSpellChecker.checkSpelling(emailMessage); // manual object creation 
