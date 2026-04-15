@@ -29,5 +29,7 @@ public class EmailApplication {
         System.out.println(advancedSpellChecker1);
 
         ((AnnotationConfigApplicationContext) applicationContext).registerShutdownHook();
+        // to listen to events at shutdown, we need to register shutdown hook - which will execute our statements inside our destroy method 
+        // we need to downcast application context to implementation class and call the register shutdown hook method
     }
 }
