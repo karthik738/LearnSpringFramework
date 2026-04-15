@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class EmailApplication {
     public static void main(String[] args) {
+        // EmailClient emailClient=new EmailClient(); // Without springboot, creating object manually
 //        ApplicationContext applicationContext =
 //                new ClassPathXmlApplicationContext("beans.xml");
         ApplicationContext applicationContext =
