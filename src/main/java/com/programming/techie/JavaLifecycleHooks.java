@@ -8,12 +8,12 @@ import javax.annotation.PreDestroy;
 @Component
 public class JavaLifecycleHooks {
 
-    @PostConstruct
+    @PostConstruct // JSR annotation
     public void init() {
         System.out.println("Inside init JavaLifecycle Hooks");
     }
 
-    @PreDestroy
+    @PreDestroy // JSR annotation
     public void destroy() {
         System.out.println("Inside destroy JavaLifecycle Hooks");
     }
