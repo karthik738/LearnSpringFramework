@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @PropertySource(value = "classpath:/application.properties")
+// @Scope("singleton") // one bean is reused everywhere
+// @Scope("prototype") // each time new bean is created
 public class AdvancedSpellChecker implements SpellChecker, InitializingBean, DisposableBean {
 
     @Value("${app.database.uri}")
