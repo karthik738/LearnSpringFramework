@@ -7,7 +7,9 @@
        <!--  it requires a constructor to be sent as argument-->
        <!-- provide fully qualified class name in class " " -->
     <bean id="emailClient" class="com.programming.techie.EmailClient">
+           <!--construction injection -->
 <!--        <constructor-arg ref="advancedSpellChecker"/>-->
+           <!-- setter injection using xml application context -->
         <property name="spellChecker" ref="basicSpellChecker"/>
     </bean>
 
