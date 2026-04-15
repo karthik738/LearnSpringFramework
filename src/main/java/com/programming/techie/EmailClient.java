@@ -25,11 +25,24 @@ class EmailClient {
     // }
     
 
-    @Autowired
+    @Autowired // field injection 
     @Qualifier("advancedSpellChecker")
     private SpellChecker spellChecker;
 
-    // using setter injection
+    
+    // here we can change the type of spellChecker and resolve autowiring issue by Type
+    // @AutoWired
+    // public void setSpellChecker(BasicSpellChecker spellChecker){
+    //     this.spellChecker=spellChecker;
+    // }
+
+    // // here we can change the name of spellChecker and resolve autowiring issue by Name
+    // @AutoWired
+    // public void setSpellChecker(SpellChecker advancedSpellChecker){
+    //     this.spellChecker=advancedSpellChecker;
+    // }
+
+    @AutoWired // using setter injection
     public void setSpellChecker(SpellChecker spellChecker){
         this.spellChecker=spellChecker;
     }
