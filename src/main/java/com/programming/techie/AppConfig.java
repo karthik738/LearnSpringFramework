@@ -3,7 +3,7 @@ package com.programming.techie;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = "com.programming.techie")
+@ComponentScan(basePackages = "com.programming.techie") // will scan all @components and create beans for them , appconfig class can be empty 
 public class AppConfig {
 
     @Bean(name = "basicSpellChecker", initMethod = "init", destroyMethod = "destroy")
