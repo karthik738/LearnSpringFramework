@@ -20,6 +20,8 @@ public class AppConfig {
 //    public EmailClient createEmailClient() {
 //        EmailClient emailClient = new EmailClient();
     // EmailClient emailClient = new EmailClient(createBasicSpellChecker();
+
+    // setter injection using config class ioc
 //        emailClient.setSpellChecker(createAdvancedSpellChecker());
 //        return emailClient;
 //    }
