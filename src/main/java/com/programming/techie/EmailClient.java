@@ -26,7 +26,7 @@ class EmailClient {
     
 
     @Autowired // field injection 
-    @Qualifier("advancedSpellChecker")
+    @Qualifier("advancedSpellChecker") // field level override
     private SpellChecker spellChecker;
 
     
@@ -43,7 +43,8 @@ class EmailClient {
     // }
 
     @AutoWired // using setter injection
-    public void setSpellChecker(SpellChecker spellChecker){
+    // @qualifier will override primary annotation - setter level 
+    public void setSpellChecker(@Quailfier("advancedSpellChecker")SpellChecker spellChecker){
         this.spellChecker=spellChecker;
     }
 
