@@ -1,7 +1,7 @@
 package com.programming.techie;
 
 //@Component
-//@Primary
+//@Primary // always injects this bean when more than 2 beans are there
 class BasicSpellChecker implements SpellChecker {
 
     public void init() {
