@@ -30,11 +30,15 @@ public class AdvancedSpellChecker implements SpellChecker, InitializingBean, Dis
         }
     }
 
+    // DisposableBean interface method
+    // run when bean is destroyed at end 
     @Override
     public void destroy() throws Exception {
         System.out.println("Destroyed Properties");
     }
 
+    // InitializingBean interface method
+    // run when bean is initlaised at start
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("Setting Properties after Bean is initialized");
