@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+       <!--  it requires a constructor to be sent as argument-->
+       <!-- provide fully qualified class name in class " " -->
     <bean id="emailClient" class="com.programming.techie.EmailClient">
 <!--        <constructor-arg ref="advancedSpellChecker"/>-->
         <property name="spellChecker" ref="basicSpellChecker"/>
